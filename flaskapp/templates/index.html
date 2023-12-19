@@ -4,7 +4,96 @@
 
 {% block content %}
 <h1 class="display-4 text-center">GL Construction Services</h1>
-<div class="text-center">
-    <img class="img-fluid" src="{{ url_for('static', filename='images/index.png') }}" style="width: 1000px;">
+<hr>
+<style>
+    .slider-container {
+        position: relative;
+        width: 1000px; /* Set the width of your slider */
+        margin: 0 auto; /* Center the slider */
+        overflow: hidden;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 40px;
+        cursor: pointer;
+        color: #F0A75C;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+<div class="slider">
+    <div class="slide">
+        <img class="img-fluid" src="{{ url_for('static', filename='images/index.png') }}" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img class="img-fluid" src="{{ url_for('static', filename='images/house.png') }}" alt="Slide 2">
+    </div>
+    <div class="slide">
+        <img class="img-fluid" src="{{ url_for('static', filename='images/flooring.png') }}" alt="Slide 3">
+    </div>
+    <div class="slide">
+        <img class="img-fluid" src="{{ url_for('static', filename='images/bathroom.png') }}" alt="Slide 4">
+    </div>
 </div>
+
+<div class="prev" onclick="prevSlide()">&#10094;</div>
+<div class="next" onclick="nextSlide()">&#10095;</div>
+</div>
+
+<script>
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+
+    if (slideIndex >= slides.length) {
+        currentSlide = 0;
+    } else if (slideIndex < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = slideIndex;
+    }
+
+    const translateValue = -currentSlide * 100 + '%';
+    slider.style.transform = 'translateX(' + translateValue + ')';
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+</script>
+<hr>
+</body>
 {% endblock %}

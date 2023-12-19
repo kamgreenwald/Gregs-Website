@@ -88,6 +88,31 @@
         transform: translateX(-100%);
       }
     }
+    .image-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .button-container {
+      position: absolute;
+      bottom: 50px; /* Adjust the distance from the bottom */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .button {
+      padding: 30px 40px;
+      font-size: 25px;
+      background-color: #060606;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
 </style>
 </head>
 <body>
@@ -159,6 +184,14 @@ function prevSlide() {
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 2"></div>
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/sc.png') }}" alt="Image 3"></div>
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/idn.png') }}" alt="Image 4"></div>
+    </div>
+  </div>
+  <div class="image-container" style="border-top: 6px solid #070707;">
+    <div>
+      <img class="img-fluid" src="{{ url_for('static', filename='images/banner.png') }}" alt="Banner">
+    </div>
+    <div class="button-container">
+      <a href="{{ url_for('index') }}" class="button">Contact Us</a>
     </div>
   </div>
 </body>

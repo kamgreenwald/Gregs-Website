@@ -43,6 +43,51 @@
     .next {
         right: 10px;
     }
+    .down-arrow {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 30px solid #F0A75C; /* Adjust color as needed */
+      margin: 20px auto; /* Adjust margin as needed */
+    }
+    .slider-container2 {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+
+    .slider2 {
+      display: inline-block;
+      animation: slide2 15s linear infinite; /* Adjust the animation duration as needed */
+    }
+
+    .icon {
+      width: 100px; 
+      height: 100px;
+      margin-right: 200px; 
+      border-radius: 50%; 
+      display: inline-block;
+      overflow: hidden;
+    }
+    .larger-icon {
+      width: 130px; /* Larger size for the second icon */
+      height: 90px;
+    }
+    .icon img {
+      width: 100%; /* Make the image fill the container */
+      height: 100%;
+      object-fit: contain\; /* Adjust to fit or cover as needed */
+    }
+
+    @keyframes slide2 {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 </style>
 </head>
 <body>
@@ -94,15 +139,27 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 </script>
-<br>
-<div style="width: 100%; text-align: center; background-color: #c9c9c9;">
-    <div style="width: 50%; float: left; color: #F0A75C; padding: 50px 0;">
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 20px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 50px 20px;">
         <h3 style="font-size: 50px;">WHAT WE DO.</h3>
     </div>
-    <div style="width: 50%; float: left; padding: 50px 0;">
+    <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center;">
         <p style="font-size: 15px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to demolitions, remodels, warehouses, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
     </div>
     <div style="clear: both;"></div>
 </div>
+<div class="down-arrow"></div>
+<br>
+<br>
+<h3 class="display-5 text-center">Clients We've Worked With:</h3>
+<br>
+<div class="slider-container2">
+    <div class="slider2">
+      <div class="icon"><img src="{{ url_for('static', filename='images/pf.png') }}" alt="Image 1"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 2"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/sc.png') }}" alt="Image 3"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/idn.png') }}" alt="Image 4"></div>
+    </div>
+  </div>
 </body>
 {% endblock %}

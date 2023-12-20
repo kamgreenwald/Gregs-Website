@@ -13,7 +13,7 @@
 
 <body class="d-flex flex-column h-100" style="background-color: #e9ecef">
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black" style="height: 80px; border-bottom: 4px solid #F0A75C;">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-black" style="height: 80px; border-bottom: 6px solid #F0A75C;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('index') }}">
                     <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Icon" width="30" height="30"> GL Construction Services
@@ -35,7 +35,7 @@
                             <a class="nav-link" href={{ url_for('index') }} style="color: #F0A75C;">Our Markets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('index') }} style="color: #F0A75C;">Contact Us</a>
+                            <a class="nav-link" href={{ url_for('contact') }} style="color: #F0A75C;">Contact Us</a>
                         </li>
                     </ul>
                 </div>

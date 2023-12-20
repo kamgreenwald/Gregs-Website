@@ -8,7 +8,7 @@
 <style>
     .slider-container {
         position: relative;
-        width: 1000px; /* Set the width of your slider */
+        width: 800px; /* Set the width of your slider */
         margin: 0 auto; /* Center the slider */
         overflow: hidden;
     }
@@ -100,9 +100,21 @@
 
     .button-container {
       position: absolute;
-      bottom: 50px; /* Adjust the distance from the bottom */
+      bottom: 60px; /* Adjust the distance from the bottom */
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    .text-container {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .display-5 {
+      font-weight: bold; /* Make the text bold */
+      color: #2d2d2d; /* Darker color */
     }
 
     .button {
@@ -164,19 +176,19 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 </script>
-<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 20px 0;">
-    <div style="width: 50%; float: left; color: #F0A75C; padding: 50px 20px;">
-        <h3 style="font-size: 50px;">WHAT WE DO.</h3>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 60px 20px;">
+        <h3 style="font-size: 55px;">WHAT WE DO.</h3>
     </div>
     <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center;">
-        <p style="font-size: 15px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to demolitions, remodels, warehouses, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
+        <p style="font-size: 20px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to demolitions, remodels, warehouses, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
     </div>
     <div style="clear: both;"></div>
 </div>
 <div class="down-arrow"></div>
 <br>
 <br>
-<h3 class="display-5 text-center">Clients We've Worked With:</h3>
+<h3 class="display-4 text-center">Clients We've Worked With:</h3>
 <br>
 <div class="slider-container2">
     <div class="slider2">
@@ -188,10 +200,13 @@ function prevSlide() {
   </div>
   <div class="image-container" style="border-top: 6px solid #070707;">
     <div>
-      <img class="img-fluid" src="{{ url_for('static', filename='images/banner.png') }}" alt="Banner">
+      <img class="img-fluid" src="{{ url_for('static', filename='images/banner2.png') }}" alt="Banner">
+    </div>
+    <div class="text-container">
+        <h3 class="display-5 text-center" style="color:#070707;">LET'S GET STARTED.</h3>
     </div>
     <div class="button-container">
-      <a href="{{ url_for('index') }}" class="button">Contact Us</a>
+      <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
     </div>
   </div>
 </body>

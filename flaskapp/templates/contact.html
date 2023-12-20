@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-section {
+      width: 30%;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 0 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 200px;
+    }
+
+    .contact-info {
+      font-size: 1.2em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="display-4 text-center">Contact Us</h1>
+
+  <div class="container">
+    <div class="contact-section">
+      <h2>Main Office</h2>
+      <p class="contact-info">Email: glpainting@comcast.net<br>Phone: (317) 840-1549</p>
+    </div>
+
+    <div class="contact-section">
+      <h2>Department 2</h2>
+      <p class="contact-info">Email: department2@example.com<br>Phone: (555) 987-6543</p>
+    </div>
+
+    <div class="contact-section">
+      <h2>Department 3</h2>
+      <p class="contact-info">Email: department3@example.com<br>Phone: (555) 876-5432</p>
+    </div>
+  </div>
+
+</body>
+{% endblock %}

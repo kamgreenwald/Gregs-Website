@@ -4,6 +4,14 @@
 
 {% block content %}
 <style>
+  body {
+    background-image: url("{{ url_for('static', filename='images/gp.png') }}"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:soft-light;
+    margin: 0;
+  }
     .container {
       display: flex;
       align-items: center;
@@ -21,18 +29,84 @@
     h1 {
       font-size: 2em;
       color: #333;
-      margin-bottom: 200px;
+      margin-bottom: 70px;
     }
 
     .contact-info {
       font-size: 1.2em;
       color: #555;
     }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #F0A75C;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 2px solid #F0A75C;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #043a5e;
+    }
+  </style>
   </style>
 </head>
 <body>
+  <h2 class="display-4 text-center">Contact Us</h2>
+  <form action="mailto:jlg4477@yahoo.com" method="post" enctype="text/plain">
+    <div>
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" pattern=".*[a-zA-Z0-9'.;:!]+\s*[a-zA-Z0-9'.;:!]*.*" required>
+    </div>
 
-  <h1 class="display-4 text-center">Contact Us</h1>
+    <div>
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="email@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+    </div>
+
+    <div>
+      <label for="phone">Phone *</label>
+      <input type="text" id="phone" name="phone" placeholder="Please enter in (xxx) xxx-xxxx format" minlength="14" maxlength="14" pattern=".*[0-9-].*" required>
+    </div>
+
+    <div>
+      <label for="industry">Industry *</label>
+      <input type="text" id="industry" name="industry" pattern=".*[a-zA-Z0-9'.;:!]+\s*[a-zA-Z0-9'.;:!]*.*" required>
+    </div>
+
+    <div>
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="3" width="33" pattern=".*[a-zA-Z0-9'.;:!]+\s*[a-zA-Z0-9'.;:!]*.*" required></textarea>
+  </div>
+
+  <button class='btn btn-primary' type="submit" value="submit" style="display: block; margin: 0 auto;">SUBMIT</button>
+  </form>
+  <br>
+  <br>
+  <br>
 
   <div class="container">
     <div class="contact-section">
@@ -41,15 +115,17 @@
     </div>
 
     <div class="contact-section">
-      <h2>Department 2</h2>
-      <p class="contact-info">Email: department2@example.com<br>Phone: (555) 987-6543</p>
+      <h2>Human Resources</h2>
+      <p class="contact-info">Email: jlg4477@yahoo.com<br>Phone: (317) 501-7266</p>
     </div>
 
     <div class="contact-section">
-      <h2>Department 3</h2>
-      <p class="contact-info">Email: department3@example.com<br>Phone: (555) 876-5432</p>
+      <h2>Billing Inquiries</h2>
+      <p class="contact-info">Email: glcsindy@GLCS.com<br>Phone: (555) 876-5432</p>
     </div>
   </div>
+  <br>
+  <br>
 
 </body>
 {% endblock %}

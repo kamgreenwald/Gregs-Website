@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Our Story{% endblock %}
+
+{% block content %}
+<div>
+    <h1 class="display-4 text-center">Our Story</h1>
+</div>
+<style>
+    .img-fluid {
+    width: 50%;
+    height: auto;
+    border: 2px solid #000; 
+}
+
+</style>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 2px solid #000000; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 60px 20px;">
+        <img class="img-fluid" src="{{ url_for('static', filename='images/g.png') }}" alt="Greg">
+    </div>
+    <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center;">
+        <p style="font-size: 15px; text-align: left;">Greg Lawrence is the pioneering force behind GL Construction Services, a company that has evolved from its roots as GL Painting to a multifaceted contracting powerhouse. With a career steeped in the craftsmanship of construction, Lawrence's journey began under the mentorship of Denny, where he honed his skills and imbibed the ethos of dedication and quality workmanship.</p>
+        <p style="font-size: 15px; text-align: left;">In 2010, armed with a wealth of experience and a vision to diversify construction services, Lawrence embarked on his entrepreneurial journey, founding GL Painting. Under his leadership, the company burgeoned beyond its initial painting focus, expanding into a comprehensive array of contracting opportunities.</p>
+        <p style="font-size: 15px; text-align: left;">Embracing residential, retail, commercial, pool construction, demolitions, and specialty contracting, GL Construction Services became synonymous with innovation, excellence, and versatility in the industry. Lawrence's leadership style, marked by a relentless pursuit of perfection and an unwavering commitment to client satisfaction, has been instrumental in steering the company's growth and success.</p>       
+        <p style="font-size: 15px; text-align: left;">Beyond his role as CEO, Lawrence remains deeply entrenched in the day-to-day operations of GL Construction Services, fostering a culture of teamwork, creativity, and adaptability among his employees. His forward-thinking approach and willingness to embrace new challenges have positioned the company as a trailblazer in the construction realm.</p>   
+        <p style="font-size: 15px; text-align: left;">Greg Lawrence continues to drive GL Construction Services forward, continually seeking new horizons, and redefining industry standards, all while staying true to the core values of integrity, excellence, and reliability.</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+{% endblock %}

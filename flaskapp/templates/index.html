@@ -3,9 +3,24 @@
 {% block title %}GL Construction Services{% endblock %}
 
 {% block content %}
+<div>
 <h1 class="display-4 text-center">GL Construction Services</h1>
-<hr>
+</div>
+<hr class="styled-hr">
 <style>
+    .styled-hr {
+        border: none;
+        height: 6px; 
+        background-color: #000;
+        border-color: #000;
+    }
+    .background {
+      background-image: url("{{ url_for('static', filename='images/gp2.png') }}"); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+    }
     .slider-container {
         position: relative;
         width: 800px;
@@ -129,6 +144,7 @@
 </head>
 <body>
 
+<div class="background">
 <div class="slider-container">
 <div class="slider">
     <div class="slide">
@@ -147,6 +163,7 @@
 
 <div class="prev" onclick="prevSlide()">&#10094;</div>
 <div class="next" onclick="nextSlide()">&#10095;</div>
+</div>
 </div>
 
 <script>
@@ -192,10 +209,10 @@ function prevSlide() {
 <br>
 <div class="slider-container2">
     <div class="slider2">
-      <div class="icon"><img src="{{ url_for('static', filename='images/pf.png') }}" alt="Image 1"></div>
-      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 2"></div>
-      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/sc.png') }}" alt="Image 3"></div>
-      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/idn.png') }}" alt="Image 4"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/idn.png') }}" alt="Image 1"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/sc.png') }}" alt="Image 2"></div>
+      <div class="icon"><img src="{{ url_for('static', filename='images/pf.png') }}" alt="Image 3"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 4"></div>
     </div>
   </div>
   <div class="image-container" style="border-top: 6px solid #070707;">

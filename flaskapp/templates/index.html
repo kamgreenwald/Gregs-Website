@@ -89,10 +89,14 @@
       width: 130px; /* Larger size for the second icon */
       height: 90px;
     }
+    .smaller-icon {
+      width: 110px; 
+      height: 70px;
+    }
     .icon img {
       width: 100%; /* Make the image fill the container */
       height: 100%;
-      object-fit: contain\; /* Adjust to fit or cover as needed */
+      object-fit: contain; /* Adjust to fit or cover as needed */
     }
 
     @keyframes slide2 {
@@ -213,6 +217,8 @@ function prevSlide() {
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/sc.png') }}" alt="Image 2"></div>
       <div class="icon"><img src="{{ url_for('static', filename='images/pf.png') }}" alt="Image 3"></div>
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 4"></div>
+      <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/cbre.png') }}" alt="Image 5"></div>
+      <div class="icon"><img src="{{ url_for('static', filename='images/ps.png') }}" alt="Image 5"></div>
     </div>
   </div>
   <div class="image-container" style="border-top: 6px solid #070707;">

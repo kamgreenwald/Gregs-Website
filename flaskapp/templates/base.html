@@ -40,7 +40,7 @@
     border-left: 3px solid black;
     height: 300px;
   }
-  .button_contact {
+    .button_contact {
       padding: 15px 20px;
       font-size: 14px;
       background-color:#F0A75C;
@@ -48,7 +48,9 @@
       text-decoration: none;
       border-radius: 4px;
     }
-</style>
+    .current {
+    text-decoration: underline;
+    }
 </style>
 
 <body class="d-flex flex-column h-100" style="background-color: #e9ecef">
@@ -69,10 +71,10 @@
                             <a class="nav-link" href={{ url_for('our_story') }} style="color: #F0A75C;">Our Story</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('index') }} style="color: #F0A75C;">Our Services</a>
+                            <a class="nav-link" href={{ url_for('our_services') }} style="color: #F0A75C;">Our Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('index') }} style="color: #F0A75C;">Our Markets</a>
+                            <a class="nav-link" href={{ url_for('our_markets') }} style="color: #F0A75C;">Our Markets</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href={{ url_for('contact') }} style="color: #F0A75C;">Contact Us</a>
@@ -136,8 +138,19 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        var currentLocation = window.location.href;
+        var navLinks = document.querySelectorAll("nav a");
 
+        navLinks.forEach(function(link) {
+            if (link.href === currentLocation) {
+            link.classList.add("current");
+            }
+        });
+        });
+    </script>        
 </body>
-
 </html>

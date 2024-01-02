@@ -10,7 +10,7 @@
 <style>
     .styled-hr {
         border: none;
-        height: 6px; 
+        height: 2px; 
         background-color: #000;
         border-color: #000;
     }
@@ -201,7 +201,7 @@ function prevSlide() {
     <div style="width: 50%; float: left; color: #F0A75C; padding: 60px 20px;">
         <h3 style="font-size: 55px;">WHAT WE DO.</h3>
     </div>
-    <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center;">
+    <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
         <p style="font-size: 20px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to demolitions, remodels, warehouses, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
     </div>
     <div style="clear: both;"></div>
@@ -218,7 +218,8 @@ function prevSlide() {
       <div class="icon"><img src="{{ url_for('static', filename='images/pf.png') }}" alt="Image 3"></div>
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/au.png') }}" alt="Image 4"></div>
       <div class="icon larger-icon"><img src="{{ url_for('static', filename='images/cbre.png') }}" alt="Image 5"></div>
-      <div class="icon"><img src="{{ url_for('static', filename='images/ps.png') }}" alt="Image 5"></div>
+      <!--public storage icon is having some issues-->
+      <div class="icon icon img"><img src="{{ url_for('static', filename='images/ps.png') }}" alt="Image 5"></div>
     </div>
   </div>
   <div class="image-container" style="border-top: 6px solid #070707;">

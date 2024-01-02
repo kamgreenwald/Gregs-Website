@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="display-4 text-center">Our Services</h1>
+</div>
+<hr class="styled-hr">
+<style>
+    .styled-hr {
+        border: none;
+        height: 2px; 
+        background-color: #000;
+        border-color: #000;
+    }
+  .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .thick-bar {
+    width: 100%;
+    height: 110px;
+    background-color: #F0A75C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thick-bar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  .thick-bar a:hover {
+    color: #FFF;
+  }
+</style>
+<div class="image-container">
+  <img class="img-fluid" src="{{ url_for('static', filename='images/donor2.png') }}" alt="Donor">
+</div>
+<div class="thick-bar">
+  <a href="{{ url_for('index') }}">Assessment</a>
+  <a href="{{ url_for('index') }}">Preparation</a>
+  <a href="{{ url_for('index') }}">Demolition</a>
+  <a href="{{ url_for('index') }}">Repair</a>
+  <a href="{{ url_for('index') }}">Recreation</a>
+  <a href="{{ url_for('index') }}">Specialty Services</a>
+</div>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 80px 20px;">
+        <h3 style="font-size: 55px;">WHAT WE PROVIDE.</h3>
+    </div>
+    <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+        <p style="font-size: 20px;">GL Construction Services strives for our expertise, we offer a spectrum of services, including assessment, preparation, demolition, repair, recreation, and specialized offerings. Our commitment to excellence ensures that each project receives the utmost attention and proficiency, solidifying our position as a dependable partner in fulfilling diverse construction requirements.</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+{% endblock %}

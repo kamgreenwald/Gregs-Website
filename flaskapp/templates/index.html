@@ -3,11 +3,19 @@
 {% block title %}GL Construction Services{% endblock %}
 
 {% block content %}
+<div class="centered-div">
+  <img src="{{ url_for('static', filename='images/icon.png') }}" alt="Icon" width="70" height="70">
+</div>
 <div>
 <h1 class="display-4 text-center">GL Construction Services</h1>
 </div>
 <hr class="styled-hr">
 <style>
+  .centered-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
     .styled-hr {
         border: none;
         height: 2px; 
@@ -202,7 +210,7 @@ function prevSlide() {
         <h3 style="font-size: 55px;">WHAT WE DO.</h3>
     </div>
     <div style="width: 50%; float: left; padding: 50px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
-        <p style="font-size: 20px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to demolitions, remodels, warehouses, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
+        <p style="font-size: 20px;">GL Construction Services is a seasoned provider offering a diverse range of services, with the capability to apply them to various building types. Our expertise extends to design-build tenant finish, demolitions, remodels, painting, multi-unit/mixed-use structures, and outdoor plazas.</p>
     </div>
     <div style="clear: both;"></div>
 </div>

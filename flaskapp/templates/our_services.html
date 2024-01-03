@@ -6,7 +6,6 @@
 <div>
   <h1 class="display-4 text-center">Our Services</h1>
 </div>
-<hr class="styled-hr">
 <style>
     .styled-hr {
         border: none;
@@ -26,6 +25,7 @@
     display: block;
     margin: 0;
     padding: 0;
+    border-top: 2px solid #000;
   }
   .thick-bar {
     width: 100%;
@@ -47,14 +47,14 @@
   }
 </style>
 <div class="image-container">
-  <img class="img-fluid" src="{{ url_for('static', filename='images/donor2.png') }}" alt="Donor">
+  <img class="img-fluid" src="{{ url_for('static', filename='images/donor3.jpg') }}" alt="Donor">
 </div>
 <div class="thick-bar">
   <a href="{{ url_for('our_services_assessment') }}">Assessment</a>
+  <a href="{{ url_for('our_services_demolition') }}">Demolition</a>
   <a href="{{ url_for('index') }}">Preparation</a>
-  <a href="{{ url_for('index') }}">Demolition</a>
-  <a href="{{ url_for('index') }}">Repair</a>
   <a href="{{ url_for('index') }}">Recreation</a>
+  <a href="{{ url_for('index') }}">Repair</a>
   <a href="{{ url_for('index') }}">Specialty Services</a>
 </div>
 <div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">

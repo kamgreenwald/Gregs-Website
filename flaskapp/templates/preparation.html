@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services | Preparation{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="display-4 text-center">Preparation</h1>
+</div>
+<style>
+    .styled-hr {
+        border: none;
+        height: 2px; 
+        background-color: #000;
+        border-color: #000;
+    }
+  .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid #000;
+  }
+  .thick-bar {
+    width: 100%;
+    height: 110px;
+    background-color: #F0A75C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thick-bar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  .thick-bar a:hover {
+    color: #FFF;
+  }
+</style>
+<div class="image-container">
+  <img class="img-fluid" src="{{ url_for('static', filename='images/demolitionjob.jpeg') }}" alt="Donor">
+</div>
+<div class="thick-bar">
+  <a href="{{ url_for('our_services_assessment') }}">Assessment</a>
+  <a href="{{ url_for('our_services_demolition') }}">Demolition</a>
+  <strong><a href="{{ url_for('our_services_preparation') }}">Preparation</a></strong>
+  <a href="{{ url_for('our_services_recreation') }}">Recreation</a>
+  <a href="{{ url_for('index') }}">Repair</a>
+  <a href="{{ url_for('index') }}">Specialty Services</a>
+</div>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 80px 20px;">
+        <h3 style="font-size: 55px;">THE END GOAL CANNOT BE ACHIEVED WITHOUT PREPARATION.</h3>
+    </div>
+    <div style="width: 50%; float: left; padding: 120px 30px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+        <p style="font-size: 20px;">
+            
+Preparation is the cornerstone of efficiency in any task. Similar to how a painter primes their canvas before creating a masterpiece, every job relies on thorough preparation to achieve optimal results. It sets the stage for success, ensuring each step is taken with purpose and precision.</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+{% endblock %}

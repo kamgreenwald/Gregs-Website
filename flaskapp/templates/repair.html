@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services | Repair{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="display-4 text-center">Repair</h1>
+</div>
+<style>
+    .styled-hr {
+        border: none;
+        height: 2px; 
+        background-color: #000;
+        border-color: #000;
+    }
+  .dual-image-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .dual-img {
+    width: 50%; /* Adjust the width as needed */
+    height: auto;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+  }
+  .dual-img2 {
+    width: 50%; /* Adjust the width as needed */
+    height: auto;
+    border-top: 2px solid #000;
+  }
+  .thick-bar {
+    width: 100%;
+    height: 110px;
+    background-color: #F0A75C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thick-bar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  .thick-bar a:hover {
+    color: #FFF;
+  }
+</style>
+<div class="dual-image-container">
+  <img class="dual-img" src="{{ url_for('static', filename='images/side1.png') }}" alt="FRAME1">
+  <img class="dual-img2" src="{{ url_for('static', filename='images/side2.png') }}" alt="FRAME2">
+</div>
+<div class="thick-bar">
+  <a href="{{ url_for('our_services_assessment') }}">Assessment</a>
+  <a href="{{ url_for('our_services_demolition') }}">Demolition</a>
+  <a href="{{ url_for('our_services_preparation') }}">Preparation</a>
+  <a href="{{ url_for('our_services_recreation') }}">Recreation</a>
+  <strong><a href="{{ url_for('our_services_repair') }}">Repair</a></strong>
+  <a href="{{ url_for('our_services_specialty_services') }}">Specialty Services</a>
+</div>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 80px 20px;">
+        <h3 style="font-size: 55px;">WHEN WE REPAIR WE BRING IT BACK TO LIFE.</h3>
+    </div>
+    <div style="width: 50%; float: left; padding: 85px 30px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+        <p style="font-size: 20px;">In the dynamic realm of construction, timely and effective repairs are crucial to maintaining the structural integrity and longevity of buildings. Our construction repair services are tailored to address a spectrum of issues, from minor damages to more complex structural concerns.</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+{% endblock %}

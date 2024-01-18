@@ -54,6 +54,20 @@
     .nav-link:hover {
         text-decoration: underline;
     }
+    .dropdown-link:hover {
+    color: #F0A75C;
+    background-color: #040404; 
+    border-radius: 4px; 
+    padding: 8px 16px; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.navbar-nav li:hover .dropdown-menu {
+    display: block;
+    background-color: #E9ECEF;
+}
+.navbar-nav .dropdown-menu {
+    display: none;
+}
 </style>
 
 <body class="d-flex flex-column h-100" style="background-color: #e9ecef">
@@ -71,24 +85,32 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('our_story') }} style="color: #F0A75C;">Our Story</a>
+                            <a class="nav-link" href="{{ url_for('our_story') }}" style="color: #F0A75C;">Our Story</a>
                         </li>
-                        <li class="nav-item dropdown" id="servicesDropdown"> <!-- Dropdown added with hover effect -->
-                            <a class="nav-link" href={{ url_for('our_services') }} style="color: #F0A75C;">Our Services</a>
+                        <li class="nav-item dropdown" id="servicesDropdown">
+                            <a class="nav-link" href="{{ url_for('our_services') }}" style="color: #F0A75C;">Our Services</a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item" href="{{ url_for('our_services_assessment') }}">Assessment</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('our_services_demolition') }}">Demolition</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('our_markets') }}">Preparation</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('our_markets') }}">Repair</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('our_markets') }}">Recreation</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for('our_markets') }}">Specialty Services</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_assessment') }}">Assessment</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_demolition') }}">Demolition</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_preparation') }}">Preparation</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_recreation') }}">Recreation</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_repair') }}">Repair</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_services_specialty_services') }}">Specialty Services</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" id="servicesDropdown">
+                            <a class="nav-link" href="{{ url_for('our_markets') }}" style="color: #F0A75C;">Our Markets</a>
+                            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Commercial</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Education Centers</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Fitness Facilities</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Healthcare</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Office</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Retail</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('our_markets') }} style="color: #F0A75C;">Our Markets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href={{ url_for('contact') }} style="color: #F0A75C;">Contact Us</a>
+                            <a class="nav-link" href="{{ url_for('contact') }}" style="color: #F0A75C;">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -152,15 +174,16 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-        var currentLocation = window.location.href;
-        var navLinks = document.querySelectorAll("nav a");
+    var currentLocation = window.location.href;
+    var navLinks = document.querySelectorAll("nav a");
 
-        navLinks.forEach(function(link) {
-            if (link.href === currentLocation) {
+    navLinks.forEach(function(link) {
+        if (link.href === currentLocation || link.parentElement.classList.contains("dropdown-item") && link.parentElement.classList.contains("current")) {
             link.classList.add("current");
-            }
-        });
-        });
+        }
+    });
+});
+;
     </script>        
 </body>
 </html>

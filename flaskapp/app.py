@@ -56,3 +56,34 @@ def our_services_specialty_services():
 def our_markets():
     """function to render the our_markets.html template"""
     return render_template("our_markets.html")
+
+@app.route("/our_markets/commercial/")
+def our_markets_commercial():
+    """function to render the commercial.html template"""
+    return render_template("commercial.html")
+
+@app.route("/our_markets/education_centers/")
+def our_markets_education_centers():
+    """function to render the education_centers.html template"""
+    return render_template("education_centers.html")
+
+@app.route("/our_markets/fitness_facilities/")
+def our_markets_fitness_facilities():
+    """function to render the fitness_facilities.html template"""
+    return render_template("fitness_facilities.html")
+
+@app.route("/our_markets/healthcare/")
+def our_markets_healthcare():
+    """function to render the healthcare.html template"""
+    return render_template("healthcare.html")
+
+@app.route("/our_markets/office/")
+def our_markets_office():
+    """function to render the office.html template"""
+    return render_template("office.html")
+
+@app.route("/our_markets/retail/")
+def our_markets_retail():
+    """function to render the retail.html template"""
+    return render_template("retail.html")
+

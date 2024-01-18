@@ -27,12 +27,18 @@
         border: 0px solid #ddd;
         background-color: #f9f9f9;
     }
+    .section_footer2 {
+        flex: 1;
+        padding: 25px;
+        border: 0px solid #ddd;
+        background-color: #f9f9f9;
+    }
     .contact-info_footer {
-        margin-bottom: 5px; /* Adjust the bottom margin */
+        margin-bottom: 5px;
         font-size: 14px;
     }
     .info_footer {
-        margin-bottom: 5px; /* Adjust the bottom margin */
+        margin-bottom: 5px;
         font-size: 14px;
         color:#F0A75C;
     }
@@ -144,16 +150,16 @@
                 <span class="text-muted">Copyright © 2024, GL Construction Services</span>
             </div>
             <div class="vertical"></div>
-            <div class="section_footer">
-                <h4>Our Services</h4>
-                <p class="info_footer">Assessment</p>
-                <p class="info_footer">Demolition</p>
-                <p class="info_footer">Preparation</p>
-                <p class="info_footer">Repair</p>
-                <p class="info_footer">Recreation</p>
-                <p class="info_footer">Specialty Services</p>
+            <div class="section_footer2">
+                <h4><a class="navbar-brand" href="{{ url_for('our_services') }}">Our Services</a></h4>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_assessment') }}">Assessment</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_demolition') }}">Demolition</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_preparation') }}">Preparation</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_recreation') }}">Recreation</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_repair') }}">Repair</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_services_specialty_services') }}">Specialty Services</a></p>
             </div>
-            <div class="section_footer">
+            <div class="section_footer2">
                 <h4>Our Markets</h4>
                 <p class="info_footer">Commercial</p>
                 <p class="info_footer">Education Centers</p>
@@ -162,7 +168,7 @@
                 <p class="info_footer">Office</p>
                 <p class="info_footer">Retail</p>
             </div>
-            <div class="section_footer">
+            <div class="section_footer2">
                 <h4><a href="{{ url_for('contact') }}" class="button_contact">CONTACT US</a></h4>
             </div>
         </div>

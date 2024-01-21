@@ -112,8 +112,8 @@
                         <li class="nav-item dropdown" id="servicesDropdown">
                             <a class="nav-link" href="{{ url_for('our_markets') }}" style="color: #F0A75C;">Our Markets</a>
                             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Commercial</a></li>
-                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Education Centers</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_markets_commercial') }}">Commercial</a></li>
+                                <li><a class="dropdown-item dropdown-link" href="{{ url_for('our_markets_education_centers') }}">Education Centers</a></li>
                                 <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Fitness Facilities</a></li>
                                 <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Healthcare</a></li>
                                 <li><a class="dropdown-item dropdown-link" href="{{ url_for('index') }}">Office</a></li>
@@ -166,8 +166,8 @@
             </div>
             <div class="section_footer2">
                 <h4><a class="navbar-brand" href="{{ url_for('our_markets') }}">Our Markets</a></h4>
-                <p class="info_footer">Commercial</p>
-                <p class="info_footer">Education Centers</p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_markets_commercial') }}">Commercial</a></p>
+                <p class="info_footer"><a class="navbar-brand" href="{{ url_for('our_markets_education_centers') }}">Education Centers</a></p>
                 <p class="info_footer">Fitness Facilities</p>
                 <p class="info_footer">Healthcare</p>
                 <p class="info_footer">Office</p>

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Our Markets | Education Centers{% endblock %}
+{% block title %}Our Markets | Fitness Facilities{% endblock %}
 
 {% block content %}
 <div>
-  <h1 class="display-4 text-center">Education Centers</h1>
+  <h1 class="display-4 text-center">Fitness Facilities</h1>
 </div>
 <style>
     .styled-hr {
@@ -47,22 +47,22 @@
   }
 </style>
 <div class="image-container">
-  <img class="img-fluid" src="{{ url_for('static', filename='images/schoolp.png') }}" alt="School">
+  <img class="img-fluid" src="{{ url_for('static', filename='images/planet.png') }}" alt="School">
 </div>
 <div class="thick-bar">
   <a href="{{ url_for('our_markets_commercial') }}">Commercial</a>
-  <strong><a href="{{ url_for('our_markets_education_centers') }}">Education Centers</a></strong>
-  <a href="{{ url_for('our_markets_fitness_facilities') }}">Fitness Facilities</a>
+  <a href="{{ url_for('our_markets_education_centers') }}">Education Centers</a>
+  <strong><a href="{{ url_for('our_markets_fitness_facilities') }}">Fitness Facilities</a></strong>
   <a href="{{ url_for('index') }}">Healthcare</a>
   <a href="{{ url_for('index') }}">Office</a>
   <a href="{{ url_for('index') }}">Retail</a>
 </div>
 <div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
     <div style="width: 50%; float: left; color: #F0A75C; padding: 80px 20px;">
-        <h3 style="font-size: 55px;">WHERE EDUCATION THRIVES, WE BUILD.</h3>
+        <h3 style="font-size: 55px;">WE SHAPE PLACES THAT INSPIRE ACTIVE LIVING.</h3>
     </div>
     <div style="width: 48%; float: left; padding: 85px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
-        <p style="font-size: 20px;">With a proven track record in education center construction, we seamlessly blend experience from schools to institutional facilities. Our focus on detail and deep respect for the vibrant learning environments sets us apart in every project we undertake.</p>
+        <p style="font-size: 20px;">With a rich history in fitness facility construction, we bring expertise to every project. Whether it's a gym or wellness center, our commitment to detail and profound respect for the vibrant activities within these spaces set the foundation for success in every endeavor.</p>
     </div>
     <div style="clear: both;"></div>
 </div>

@@ -18,18 +18,20 @@
     justify-content: space-between;
     width: 100%;
     overflow: hidden;
-  }
-
-  .dual-img {
-    width: 50%; /* Adjust the width as needed */
-    height: auto;
     border-top: 2px solid #000;
+    background-image: url("{{ url_for('static', filename='images/gp2.png') }}"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .dual-img {
+    width: 40%;
+    height: auto;
     border-right: 2px solid #000;
   }
   .dual-img2 {
-    width: 50%; /* Adjust the width as needed */
+    width: 40%;
     height: auto;
-    border-top: 2px solid #000;
   }
   .thick-bar {
     width: 100%;

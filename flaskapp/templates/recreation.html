@@ -17,15 +17,18 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    border-top: 2px solid #000;
+    background-image: url("{{ url_for('static', filename='images/gp2.png') }}"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-
   .img-fluid {
-    width: 100%;
+    width: 60%;
     height: auto;
     display: block;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    border-top: 2px solid #000;
   }
   .thick-bar {
     width: 100%;

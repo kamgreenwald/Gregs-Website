@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Our Markets | Healthcare{% endblock %}
+
+{% block content %}
+<div>
+  <h1 class="display-4 text-center">Healthcare</h1>
+</div>
+<style>
+    .styled-hr {
+        border: none;
+        height: 2px; 
+        background-color: #000;
+        border-color: #000;
+    }
+    .image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-top: 2px solid #000;
+    background-image: url("{{ url_for('static', filename='images/gp2.png') }}"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .img-fluid {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 0;
+  }
+  .thick-bar {
+    width: 100%;
+    height: 110px;
+    background-color: #F0A75C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .thick-bar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+  }
+  .thick-bar a:hover {
+    color: #FFF;
+  }
+</style>
+<div class="image-container">
+  <img class="img-fluid" src="{{ url_for('static', filename='images/health.png') }}" alt="Health">
+</div>
+<div class="thick-bar">
+  <a href="{{ url_for('our_markets_commercial') }}">Commercial</a>
+  <a href="{{ url_for('our_markets_education_centers') }}">Education Centers</a>
+  <a href="{{ url_for('our_markets_fitness_facilities') }}">Fitness Facilities</a>
+  <strong><a href="{{ url_for('our_markets_healthcare') }}">Healthcare</a></strong>
+  <a href="{{ url_for('index') }}">Office</a>
+  <a href="{{ url_for('index') }}">Retail</a>
+</div>
+<div style="width: 100%; text-align: center; background-color: #c9c9c9; border-top: 6px solid #F0A75C; padding: 40px 0;">
+    <div style="width: 50%; float: left; color: #F0A75C; padding: 80px 20px;">
+        <h3 style="font-size: 55px;">WE WORK WHERE LIFE-SAVING CARE UNFOLDS.</h3>
+    </div>
+    <div style="width: 48%; float: left; padding: 85px 20px; display: flex; flex-direction: column; align-items: center; text-align: left;">
+        <p style="font-size: 20px;">With a background in healthcare construction, our experience spans from hospitals to medical institutions. We approach each project with meticulous attention to detail and a deep respect for the critical activities occurring within the healthcare environment.</p>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+{% endblock %}
